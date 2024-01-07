@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AccountApplicationDemoApp
 {
-    internal class Account
+    public class Account
     {
+        public int Id;
+        public string Name;
+        public decimal Balance;
+
+
     }
 }
