@@ -11,13 +11,20 @@ namespace AccountApplicationDemoApp
         public int Id;
         public string Name;
         public decimal Balance;
-        public Account()
+
+        public void Deposit(decimal amount)
         {
-            MessageBox.Show("Object is created");
+            this.Balance += amount;
         }
-        ~Account()
+        public void Withdraw(decimal withdrawlAmt)
         {
-            MessageBox.Show("Object is destroyed");
+            if (this.Balance-withdrawlAmt < 500) {
+                throw new ApplicationException("Insufficient funds");
+            }
+            else
+            {
+                this.Balance-= withdrawlAmt;
+            }
         }
 
     }
