@@ -45,7 +45,7 @@ namespace AccountApplicationDemoApp
 
         private void btnDestroy_Click(object sender, EventArgs e)
         {
-
+            a = null;
         }
 
         private void btnGC_Click(object sender, EventArgs e)

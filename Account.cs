@@ -11,7 +11,14 @@ namespace AccountApplicationDemoApp
         public int Id;
         public string Name;
         public decimal Balance;
-
+        public Account()
+        {
+            MessageBox.Show("Object is created");
+        }
+        ~Account()
+        {
+            MessageBox.Show("Object is destroyed");
+        }
 
     }
 }
