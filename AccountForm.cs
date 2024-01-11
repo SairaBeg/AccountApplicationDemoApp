@@ -19,7 +19,7 @@ namespace AccountApplicationDemoApp
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-         a = new Account();
+            a = new Account();
         }
 
         private void btnSet_Click(object sender, EventArgs e)
@@ -50,7 +50,20 @@ namespace AccountApplicationDemoApp
 
         private void btnGC_Click(object sender, EventArgs e)
         {
+            GC.Collect();
+        }
 
+        private void btnTemp_Click(object sender, EventArgs e)
+        {
+            Account a1;
+            a1 = new Account();
+            a = a1;
+
+        }
+
+        private void btnGetGeneration_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(GC.GetGeneration(a).ToString());
         }
     }
 }

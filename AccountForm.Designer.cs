@@ -40,13 +40,15 @@
             btnGC = new Button();
             btnDestroy = new Button();
             btnClear = new Button();
+            btnGetGeneration = new Button();
+            btnTemp = new Button();
             SuspendLayout();
             // 
             // txtId
             // 
-            txtId.Location = new Point(28, 35);
+            txtId.Location = new Point(55, 35);
             txtId.Name = "txtId";
-            txtId.Size = new Size(157, 23);
+            txtId.Size = new Size(130, 23);
             txtId.TabIndex = 1;
             // 
             // label1
@@ -57,7 +59,6 @@
             label1.Size = new Size(17, 15);
             label1.TabIndex = 0;
             label1.Text = "Id";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -79,16 +80,17 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(190, 35);
+            txtName.Location = new Point(207, 35);
             txtName.Name = "txtName";
-            txtName.Size = new Size(157, 23);
+            txtName.Size = new Size(132, 23);
             txtName.TabIndex = 3;
+            txtName.Click += label1_Click;
             // 
             // txtBalance
             // 
-            txtBalance.Location = new Point(350, 35);
+            txtBalance.Location = new Point(362, 35);
             txtBalance.Name = "txtBalance";
-            txtBalance.Size = new Size(157, 23);
+            txtBalance.Size = new Size(132, 23);
             txtBalance.TabIndex = 5;
             // 
             // btnCreate
@@ -151,11 +153,33 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnGetGeneration
+            // 
+            btnGetGeneration.Location = new Point(207, 211);
+            btnGetGeneration.Name = "btnGetGeneration";
+            btnGetGeneration.Size = new Size(287, 53);
+            btnGetGeneration.TabIndex = 13;
+            btnGetGeneration.Text = "Get Generation";
+            btnGetGeneration.UseVisualStyleBackColor = true;
+            btnGetGeneration.Click += btnGetGeneration_Click;
+            // 
+            // btnTemp
+            // 
+            btnTemp.Location = new Point(55, 211);
+            btnTemp.Name = "btnTemp";
+            btnTemp.Size = new Size(132, 53);
+            btnTemp.TabIndex = 12;
+            btnTemp.Text = "Temp";
+            btnTemp.UseVisualStyleBackColor = true;
+            btnTemp.Click += btnTemp_Click;
+            // 
             // AccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 274);
+            Controls.Add(btnGetGeneration);
+            Controls.Add(btnTemp);
             Controls.Add(btnGC);
             Controls.Add(btnDestroy);
             Controls.Add(btnClear);
@@ -170,7 +194,6 @@
             Controls.Add(txtId);
             Name = "AccountForm";
             Text = "Account Form";
-            Load += AccountForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +212,7 @@
         private Button btnGC;
         private Button btnDestroy;
         private Button btnClear;
+        private Button btnGetGeneration;
+        private Button btnTemp;
     }
 }
