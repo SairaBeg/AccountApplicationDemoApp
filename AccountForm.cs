@@ -65,5 +65,15 @@ namespace AccountApplicationDemoApp
         {
             MessageBox.Show(GC.GetGeneration(a).ToString());
         }
+
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            a.Deposit(decimal.Parse(txtAmount.Text));
+        }
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            a.Withdraw(decimal.Parse(txtAmount.Text));
+        }
     }
 }

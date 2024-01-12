@@ -42,6 +42,9 @@
             btnClear = new Button();
             btnGetGeneration = new Button();
             btnTemp = new Button();
+            btnDeposit = new Button();
+            btnWithdraw = new Button();
+            txtAmount = new TextBox();
             SuspendLayout();
             // 
             // txtId
@@ -173,11 +176,41 @@
             btnTemp.UseVisualStyleBackColor = true;
             btnTemp.Click += btnTemp_Click;
             // 
+            // btnDeposit
+            // 
+            btnDeposit.Location = new Point(55, 286);
+            btnDeposit.Name = "btnDeposit";
+            btnDeposit.Size = new Size(132, 53);
+            btnDeposit.TabIndex = 14;
+            btnDeposit.Text = "Deposit";
+            btnDeposit.UseVisualStyleBackColor = true;
+            btnDeposit.Click += btnDeposit_Click;
+            // 
+            // btnWithdraw
+            // 
+            btnWithdraw.Location = new Point(362, 286);
+            btnWithdraw.Name = "btnWithdraw";
+            btnWithdraw.Size = new Size(132, 53);
+            btnWithdraw.TabIndex = 15;
+            btnWithdraw.Text = "Withdraw";
+            btnWithdraw.UseVisualStyleBackColor = true;
+            btnWithdraw.Click += btnWithdraw_Click;
+            // 
+            // txtAmount
+            // 
+            txtAmount.Location = new Point(207, 302);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(132, 23);
+            txtAmount.TabIndex = 16;
+            // 
             // AccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(555, 274);
+            ClientSize = new Size(555, 366);
+            Controls.Add(txtAmount);
+            Controls.Add(btnWithdraw);
+            Controls.Add(btnDeposit);
             Controls.Add(btnGetGeneration);
             Controls.Add(btnTemp);
             Controls.Add(btnGC);
@@ -214,5 +247,8 @@
         private Button btnClear;
         private Button btnGetGeneration;
         private Button btnTemp;
+        private Button btnDeposit;
+        private Button btnWithdraw;
+        private TextBox txtAmount;
     }
 }
