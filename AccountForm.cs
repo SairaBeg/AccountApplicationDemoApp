@@ -26,7 +26,7 @@ namespace AccountApplicationDemoApp
         {
             a.Id = int.Parse(txtId.Text);
             a.Name = txtName.Text;
-            a.Balance = decimal.Parse(txtBalance.Text);
+            a.Deposit(decimal.Parse(txtBalance.Text));
         }
 
         private void btnGet_Click(object sender, EventArgs e)

@@ -8,13 +8,45 @@ namespace AccountApplicationDemoApp
 {
     public class Account
     {
-        public int Id;
-        public string Name;
-        public decimal Balance;
+        private int _Id;
+        private string _Name;
+        private decimal _Balance;
 
+        private bool _IdAlreadySet;
+
+        public string Address { get; set; }
+        public int Id { get { return _Id; }
+            set
+            {
+                if (_IdAlreadySet)
+                    throw new ApplicationException("Id is already set");
+                _Id = value;
+                _IdAlreadySet = true;
+            }
+        }
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                if (value.Length > 8)
+                {
+                    throw new ApplicationException("Name cannot be more than 8 characters");
+                }
+                _Name = value;
+            }
+        }
+        public decimal Balance
+        {
+            get { return _Balance; }
+            //set {_Balance = value; } 
+        }
         public void Deposit(decimal amount)
         {
-            this.Balance += amount;
+            this._Balance += amount;
         }
         public void Withdraw(decimal withdrawlAmt)
         {
@@ -23,7 +55,7 @@ namespace AccountApplicationDemoApp
             }
             else
             {
-                this.Balance-= withdrawlAmt;
+                this._Balance-= withdrawlAmt;
             }
         }
 
