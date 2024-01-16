@@ -12,9 +12,23 @@ namespace AccountApplicationDemoApp
         private string _Name;
         private decimal _Balance;
 
+        public Account()
+        {
+            
+        }
+        public Account(int id, string name, decimal balance)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Balance = balance;
+        }
+        public Account(Account a)
+        {
+            this.Id = a.Id;
+            this.Name = a.Name;
+            this.Balance = a.Balance;
+        }
         private bool _IdAlreadySet;
-
-        public string Address { get; set; }
         public int Id { get { return _Id; }
             set
             {
@@ -42,7 +56,7 @@ namespace AccountApplicationDemoApp
         public decimal Balance
         {
             get { return _Balance; }
-            //set {_Balance = value; } 
+          set {_Balance = value; } 
         }
         public void Deposit(decimal amount)
         {

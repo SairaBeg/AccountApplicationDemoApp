@@ -20,6 +20,8 @@ namespace AccountApplicationDemoApp
         private void btnCreate_Click(object sender, EventArgs e)
         {
             a = new Account();
+            Account a1;
+            a1 = new Account(1, "Test", 10000);
         }
 
         private void btnSet_Click(object sender, EventArgs e)
