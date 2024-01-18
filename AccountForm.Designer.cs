@@ -188,7 +188,7 @@
             // 
             // btnWithdraw
             // 
-            btnWithdraw.Location = new Point(362, 286);
+            btnWithdraw.Location = new Point(207, 286);
             btnWithdraw.Name = "btnWithdraw";
             btnWithdraw.Size = new Size(132, 53);
             btnWithdraw.TabIndex = 15;
@@ -198,7 +198,7 @@
             // 
             // txtAmount
             // 
-            txtAmount.Location = new Point(207, 302);
+            txtAmount.Location = new Point(362, 302);
             txtAmount.Name = "txtAmount";
             txtAmount.Size = new Size(132, 23);
             txtAmount.TabIndex = 16;
