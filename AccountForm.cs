@@ -22,6 +22,7 @@ namespace AccountApplicationDemoApp
             a = new Account();
             Account a1;
             a1 = new Account(1, "Test", 10000);
+            Account a2 = new Account(a1);
         }
         //Set Button
         private void btnSet_Click(object sender, EventArgs e)

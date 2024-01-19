@@ -11,22 +11,29 @@ namespace AccountApplicationDemoApp
         private int _Id;
         private string _Name;
         private decimal _Balance;
-
+        //Parameterless constructor/Default constructor
         public Account()
         {
             
         }
-        public Account(int id, string name, decimal balance)
+        //Parametized constructor
+        public Account(int id, string name, decimal balance):this()
         {
             this.Id = id;
             this.Name = name;
             this.Balance = balance;
         }
-        public Account(Account a)
+        //Copy constructor
+        public Account(Account a):this(a._Id,a._Name,a._Balance)
         {
-            this.Id = a.Id;
-            this.Name = a.Name;
-            this.Balance = a.Balance;
+            //this.Id = a.Id;
+            //this.Name = a.Name;
+            //this.Balance = a.Balance;
+        }
+        //Destructor 
+        ~Account()
+        {
+
         }
         private bool _IdAlreadySet;
         public int Id { get { return _Id; }
