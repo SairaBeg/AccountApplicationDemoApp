@@ -11,6 +11,8 @@ namespace AccountApplicationDemoApp
         private int _Id;
         private string _Name;
         private decimal _Balance;
+
+        public static int MinBalance = 500;
         //Parameterless constructor/Default constructor
         public Account()
         {
@@ -71,7 +73,7 @@ namespace AccountApplicationDemoApp
         }
         public void Withdraw(decimal withdrawlAmt)
         {
-            if (this.Balance-withdrawlAmt < 500) {
+            if (this.Balance-withdrawlAmt < MinBalance) {
                 throw new ApplicationException("Insufficient funds");
             }
             else
