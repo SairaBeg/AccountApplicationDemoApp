@@ -45,6 +45,9 @@
             btnDeposit = new Button();
             btnWithdraw = new Button();
             txtAmount = new TextBox();
+            txtMB = new TextBox();
+            btnGetMB = new Button();
+            btnSetMB = new Button();
             SuspendLayout();
             // 
             // txtId
@@ -203,11 +206,39 @@
             txtAmount.Size = new Size(132, 23);
             txtAmount.TabIndex = 16;
             // 
+            // txtMB
+            // 
+            txtMB.Location = new Point(362, 375);
+            txtMB.Name = "txtMB";
+            txtMB.Size = new Size(132, 23);
+            txtMB.TabIndex = 19;
+            // 
+            // btnGetMB
+            // 
+            btnGetMB.Location = new Point(207, 359);
+            btnGetMB.Name = "btnGetMB";
+            btnGetMB.Size = new Size(132, 53);
+            btnGetMB.TabIndex = 18;
+            btnGetMB.Text = "Get MB";
+            btnGetMB.UseVisualStyleBackColor = true;
+            // 
+            // btnSetMB
+            // 
+            btnSetMB.Location = new Point(55, 359);
+            btnSetMB.Name = "btnSetMB";
+            btnSetMB.Size = new Size(132, 53);
+            btnSetMB.TabIndex = 17;
+            btnSetMB.Text = "Set MB";
+            btnSetMB.UseVisualStyleBackColor = true;
+            // 
             // AccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(555, 366);
+            ClientSize = new Size(555, 441);
+            Controls.Add(txtMB);
+            Controls.Add(btnGetMB);
+            Controls.Add(btnSetMB);
             Controls.Add(txtAmount);
             Controls.Add(btnWithdraw);
             Controls.Add(btnDeposit);
@@ -250,5 +281,8 @@
         private Button btnDeposit;
         private Button btnWithdraw;
         private TextBox txtAmount;
+        private TextBox txtMB;
+        private Button btnGetMB;
+        private Button btnSetMB;
     }
 }

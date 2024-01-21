@@ -13,6 +13,12 @@ namespace AccountApplicationDemoApp
         private decimal _Balance;
 
         public static int MinBalance = 500;
+
+        static Account()
+        {
+            //Place for initialization of all static class memebers
+        }
+
         //Parameterless constructor/Default constructor
         public Account()
         {
