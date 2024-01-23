@@ -221,6 +221,7 @@
             btnGetMB.TabIndex = 18;
             btnGetMB.Text = "Get MB";
             btnGetMB.UseVisualStyleBackColor = true;
+            btnGetMB.Click += btnGetMB_Click;
             // 
             // btnSetMB
             // 
@@ -230,6 +231,7 @@
             btnSetMB.TabIndex = 17;
             btnSetMB.Text = "Set MB";
             btnSetMB.UseVisualStyleBackColor = true;
+            btnSetMB.Click += btnSetMB_Click;
             // 
             // AccountForm
             // 

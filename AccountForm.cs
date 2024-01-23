@@ -78,5 +78,15 @@ namespace AccountApplicationDemoApp
         {
             a.Withdraw(decimal.Parse(txtAmount.Text));
         }
+
+        private void btnSetMB_Click(object sender, EventArgs e)
+        {
+            Account.MinBalance = int.Parse(txtMB.Text);
+        }
+
+        private void btnGetMB_Click(object sender, EventArgs e)
+        {
+            txtMB.Text = Account.MinBalance.ToString();
+        }
     }
 }
