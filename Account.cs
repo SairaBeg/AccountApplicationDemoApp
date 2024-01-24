@@ -17,6 +17,7 @@ namespace AccountApplicationDemoApp
         static Account()
         {
             //Place for initialization of all static class memebers
+            System.Windows.Forms.MessageBox.Show("Class is loaded via static constructor");
         }
 
         //Parameterless constructor/Default constructor
